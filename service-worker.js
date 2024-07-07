@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/SuppliesPro-Website/precache-manifest.7846845c1671401987a3830f1801b503.js"
+  "/SuppliesPro-Website/precache-manifest.bda60c9d21587889e6f8f1eb7d632f24.js"
 );
 
 self.addEventListener('message', (event) => {

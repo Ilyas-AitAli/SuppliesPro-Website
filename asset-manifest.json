@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SuppliesPro-Website/static/css/main.39a00080.chunk.css",
-    "main.js": "/SuppliesPro-Website/static/js/main.0bcc0098.chunk.js",
-    "main.js.map": "/SuppliesPro-Website/static/js/main.0bcc0098.chunk.js.map",
+    "main.js": "/SuppliesPro-Website/static/js/main.d8035f37.chunk.js",
+    "main.js.map": "/SuppliesPro-Website/static/js/main.d8035f37.chunk.js.map",
     "runtime~main.js": "/SuppliesPro-Website/static/js/runtime~main.b1c7ea20.js",
     "runtime~main.js.map": "/SuppliesPro-Website/static/js/runtime~main.b1c7ea20.js.map",
     "static/js/2.4b97ad41.chunk.js": "/SuppliesPro-Website/static/js/2.4b97ad41.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.bb0829b5.chunk.js": "/SuppliesPro-Website/static/js/3.bb0829b5.chunk.js",
     "static/js/3.bb0829b5.chunk.js.map": "/SuppliesPro-Website/static/js/3.bb0829b5.chunk.js.map",
     "index.html": "/SuppliesPro-Website/index.html",
-    "precache-manifest.7846845c1671401987a3830f1801b503.js": "/SuppliesPro-Website/precache-manifest.7846845c1671401987a3830f1801b503.js",
+    "precache-manifest.bda60c9d21587889e6f8f1eb7d632f24.js": "/SuppliesPro-Website/precache-manifest.bda60c9d21587889e6f8f1eb7d632f24.js",
     "service-worker.js": "/SuppliesPro-Website/service-worker.js",
     "static/css/main.39a00080.chunk.css.map": "/SuppliesPro-Website/static/css/main.39a00080.chunk.css.map"
   }
