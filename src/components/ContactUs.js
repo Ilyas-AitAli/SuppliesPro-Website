@@ -10,7 +10,7 @@ function ContactUs() {
           <p>We'd love to hear from you!</p>
         </div>
         <div className="hero-image">
-          <img src="/images/contact-hero.jpg" alt="Contact Us" />
+          <img src={`${process.env.PUBLIC_URL}/images/contact-hero.jpg`} alt="Contact Us" />
         </div>
       </section>
 

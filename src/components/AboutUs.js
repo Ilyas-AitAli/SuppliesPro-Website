@@ -10,7 +10,7 @@ function AboutUs() {
           <p>Your Partner in Fitness and Wellness</p>
         </div>
         <div className="hero-image">
-          <img src="/images/about-hero.jpg" alt="About SuppliesPro" />
+          <img src={`${process.env.PUBLIC_URL}/images/about-hero.jpg`} alt="About SuppliesPro" />
         </div>
       </section>
 
@@ -39,17 +39,17 @@ function AboutUs() {
         <h2>Meet Our Team</h2>
         <div className="team-members">
           <div className="team-member">
-            <img src="/images/1.png" alt="Team Member 1" />
+          <img src={`${process.env.PUBLIC_URL}/images/1.png`} alt="Team Member 1" />
             <h3>John Doe</h3>
             <p>Founder & CEO</p>
           </div>
           <div className="team-member">
-            <img src="/images/3.png" alt="Team Member 2" />
+          <img src={`${process.env.PUBLIC_URL}/images/3.png`} alt="Team Member 2" />
             <h3>Patrick Smith</h3>
             <p>Chief Operating Officer</p>
           </div>
           <div className="team-member">
-            <img src="/images/6.png" alt="Team Member 3" />
+          <img src={`${process.env.PUBLIC_URL}/images/6.png`} alt="Team Member 3" />
             <h3>Jack Johnson</h3>
             <p>Head of Marketing</p>
           </div>
