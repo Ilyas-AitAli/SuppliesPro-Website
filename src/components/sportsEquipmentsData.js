@@ -3,7 +3,7 @@ const sportsEquipmentsData = [
     id: 5,
     name: 'Dumbbells',
     price: 49.99,
-    image: '/images/dumbbells.jpg',
+    image: `${process.env.PUBLIC_URL}/images/dumbbells.jpg`,
     description: 'High-quality dumbbells perfect for strength training and muscle building. Available in various weights to suit your needs.',
     advantages: [
       'Improves muscle strength',
@@ -15,7 +15,7 @@ const sportsEquipmentsData = [
     id: 6,
     name: 'Jump Rope',
     price: 14.99,
-    image: '/images/jump-rope.jpg',
+    image: `${process.env.PUBLIC_URL}/images/jump-rope.jpg`,
     description: 'A durable jump rope that helps improve cardiovascular fitness and coordination. Adjustable length to fit all users.',
     advantages: [
       'Enhances cardiovascular fitness',
@@ -27,7 +27,7 @@ const sportsEquipmentsData = [
     id: 7,
     name: 'Yoga Mat',
     price: 29.99,
-    image: '/images/yoga-mat.jpg',
+    image: `${process.env.PUBLIC_URL}/images/yoga-mat.jpg`,
     description: 'Non-slip yoga mat with cushioning for comfort during your yoga or pilates sessions. Lightweight and easy to carry.',
     advantages: [
       'Provides cushioning and support',
@@ -39,7 +39,7 @@ const sportsEquipmentsData = [
     id: 8,
     name: 'Kettlebell',
     price: 39.99,
-    image: '/images/kettlebell.jpg',
+    image: `${process.env.PUBLIC_URL}/images/kettlebell.jpg`,
     description: 'High-quality kettlebell for strength training, conditioning, and endurance workouts. Available in various weights.',
     advantages: [
       'Enhances strength and conditioning',
