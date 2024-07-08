@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../context/CartContext';
 import './Header.css';
 
 function Header() {
+  const { cart } = useContext(CartContext);
+
   return (
     <header className="header">
       <div className="logo">
@@ -15,13 +18,16 @@ function Header() {
           <li><Link to="/sports-equipments">Sports Equipments</Link></li>
           <li><Link to="/about-us">About Us</Link></li>
           <li><Link to="/contact-us">Contact Us</Link></li>
-          <li><Link to="/client-progress">Our Clients Progress</Link></li> 
+          <li><Link to="/client-progress">Our Clients Progress</Link></li>
         </ul>
       </nav>
       <div className="user-section">
-        <Link to="/cart">Cart</Link>
+        <Link to="/cart" className="cart-icon">
+          <i className="fas fa-shopping-cart"></i>
+          {cart.length > 0 && <span className="cart-count">{cart.length}</span>}
+        </Link>
         <Link to="/register">Register</Link>
-        <Link to="/login">LogIn</Link>
+        <Link to="/login">Log In</Link>
       </div>
     </header>
   );
