@@ -51,7 +51,7 @@ function HomePage() {
 
       {/* Testimonials */}
       <section className="testimonials">
-        <h2>What Our Students/Clients Say</h2>
+        <h2>What Our Clients Say</h2>
         <div className="testimonial-slider">
           <button onClick={prevTestimonial}>
             <FontAwesomeIcon icon={faChevronLeft} />
