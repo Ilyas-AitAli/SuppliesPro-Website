@@ -10,6 +10,7 @@ import Login from './components/Login';
 import Cart from './components/Cart';
 import AboutUs from './components/AboutUs';
 import ProductDetail from './components/ProductDetail';
+import ClientProgress from './components/ClientProgress';
 import { CartProvider } from './context/CartContext';
 import './App.css';
 
@@ -29,8 +30,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/product/:category/:productId" element={<ProductDetail />} />
+            <Route path="/client-progress" element={<ClientProgress />} /> 
           </Routes>
-
         </div>
       </Router>
     </CartProvider>
