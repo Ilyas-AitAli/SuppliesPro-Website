@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight, faAppleAlt, faDumbbell } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import FAQ from './FAQ'; 
 import './HomePage.css';
 
 function HomePage() {
@@ -45,7 +46,7 @@ function HomePage() {
           </a>
         </div>
         <div className="hero-image">
-        <img src={`${process.env.PUBLIC_URL}/images/Adventure.jpg`} alt="Adventure" />
+          <img src={`${process.env.PUBLIC_URL}/images/Adventure.jpg`} alt="Adventure" />
         </div>
       </section>
 
@@ -87,7 +88,7 @@ function HomePage() {
                 <p>Find the best supplements to boost your performance and health.</p>
               </div>
             </div>
-            <Link to="/food-supplements" className="category-text">Supplements</Link>
+            <Link to="/food-supplements" className="category-button">Supplements</Link>
           </div>
           <div className="category-wrapper">
             <div className={`category ${isFlipped.equipments ? 'flipped' : ''}`} onClick={() => handleFlip('equipments')}>
@@ -98,7 +99,7 @@ function HomePage() {
                 <p>Discover our range of high-quality sports equipments.</p>
               </div>
             </div>
-            <Link to="/sports-equipments" className="category-text">Equipments</Link>
+            <Link to="/sports-equipments" className="category-button">Equipments</Link>
           </div>
         </div>
       </section>
@@ -110,46 +111,46 @@ function HomePage() {
           <div className="product-wrapper">
             <div className={`product ${isProductFlipped.proteinWhey ? 'flipped' : ''}`} onClick={() => handleProductFlip('proteinWhey')}>
               <div className="front">
-              <img src={`${process.env.PUBLIC_URL}/images/protein-whey.jpg`} alt="Protein Whey" />
+                <img src={`${process.env.PUBLIC_URL}/images/protein-whey.jpg`} alt="Protein Whey" />
               </div>
               <div className="back">
                 <p>High-quality protein whey for muscle growth and recovery.</p>
               </div>
             </div>
-            <Link to="/food-supplements" className="product-text">Protein Whey</Link>
+            <Link to="/food-supplements" className="product-button">Protein Whey</Link>
           </div>
           <div className="product-wrapper">
             <div className={`product ${isProductFlipped.creatine ? 'flipped' : ''}`} onClick={() => handleProductFlip('creatine')}>
               <div className="front">
-              <img src={`${process.env.PUBLIC_URL}/images/creatine.jpg`} alt="Creatine" />
+                <img src={`${process.env.PUBLIC_URL}/images/creatine.jpg`} alt="Creatine" />
               </div>
               <div className="back">
                 <p>Creatine to enhance your workout performance.</p>
               </div>
             </div>
-            <Link to="/food-supplements" className="product-text">Creatine</Link>
+            <Link to="/food-supplements" className="product-button">Creatine</Link>
           </div>
           <div className="product-wrapper">
             <div className={`product ${isProductFlipped.dumbbells ? 'flipped' : ''}`} onClick={() => handleProductFlip('dumbbells')}>
               <div className="front">
-              <img src={`${process.env.PUBLIC_URL}/images/dumbbells.jpg`} alt="Dumbbells" />
+                <img src={`${process.env.PUBLIC_URL}/images/dumbbells.jpg`} alt="Dumbbells" />
               </div>
               <div className="back">
                 <p>Durable dumbbells for strength training.</p>
               </div>
             </div>
-            <Link to="/sports-equipments" className="product-text">Dumbbells</Link>
+            <Link to="/sports-equipments" className="product-button">Dumbbells</Link>
           </div>
           <div className="product-wrapper">
             <div className={`product ${isProductFlipped.jumpRope ? 'flipped' : ''}`} onClick={() => handleProductFlip('jumpRope')}>
               <div className="front">
-              <img src={`${process.env.PUBLIC_URL}/images/jump-rope.jpg`} alt="Jump Rope" />
+                <img src={`${process.env.PUBLIC_URL}/images/jump-rope.jpg`} alt="Jump Rope" />
               </div>
               <div className="back">
                 <p>High-quality jump rope for cardio workouts.</p>
               </div>
             </div>
-            <Link to="/sports-equipments" className="product-text">Jump Rope</Link>
+            <Link to="/sports-equipments" className="product-button">Jump Rope</Link>
           </div>
         </div>
       </section>
@@ -171,12 +172,12 @@ function HomePage() {
               </p>
             </div>
             <div className="article-image">
-            <img src={`${process.env.PUBLIC_URL}/images/dietary-supplements.jpg`} alt="Dietary Supplements" />
+              <img src={`${process.env.PUBLIC_URL}/images/dietary-supplements.jpg`} alt="Dietary Supplements" />
             </div>
           </div>
           <div className="article">
             <div className="article-image">
-            <img src={`${process.env.PUBLIC_URL}/images/home-sports-equipment.jpg`} alt="Home Sports Equipment" />
+              <img src={`${process.env.PUBLIC_URL}/images/home-sports-equipment.jpg`} alt="Home Sports Equipment" />
             </div>
             <div className="article-content">
               <h3>Home Sports Equipment</h3>
@@ -192,6 +193,9 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ />
     </div>
   );
 }

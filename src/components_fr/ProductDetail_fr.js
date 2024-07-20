@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import productsData from './productsData';
-import sportsEquipmentsData from './sportsEquipmentsData';
+import productsData from './productsData_fr';
+import sportsEquipmentsData from './sportsEquipmentsData_fr';
 import './ProductDetail.css';
 
-function ProductDetail() {
+function ProductDetail_fr() {
   const { category, productId } = useParams();
   let product;
 
@@ -15,16 +15,16 @@ function ProductDetail() {
   }
 
   if (!product) {
-    return <h2>Product not found</h2>;
+    return <h2>Produit non trouvé</h2>;
   }
 
   return (
     <div className="product-detail">
       <h1>{product.name}</h1>
       <img src={product.image} alt={product.name} />
-      <p>Price: ${product.price.toFixed(2)}</p>
+      <p>Prix : {product.price.toFixed(2)} €</p>
       <p>{product.description}</p>
-      <h3>Advantages:</h3>
+      <h3>Avantages :</h3>
       <ul>
         {product.advantages.map((advantage, index) => (
           <li key={index}>{advantage}</li>
@@ -34,4 +34,4 @@ function ProductDetail() {
   );
 }
 
-export default ProductDetail;
+export default ProductDetail_fr;

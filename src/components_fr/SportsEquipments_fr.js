@@ -2,10 +2,10 @@ import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import { CompareContext } from '../context/CompareContext';
-import sportsEquipmentsData from './sportsEquipmentsData';
+import sportsEquipmentsData from './sportsEquipmentsData_fr';
 import './FoodSupplements.css'; // Réutilisation du même CSS pour la simplicité
 
-function SportsEquipments() {
+function SportsEquipments_fr() {
   const [searchTerm, setSearchTerm] = useState('');
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
@@ -31,24 +31,24 @@ function SportsEquipments() {
 
   return (
     <div className="food-supplements">
-      <h1>Sports Equipments</h1>
+      <h1>Équipements Sportifs</h1>
 
       <div className="filters">
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="Rechercher..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <input
           type="number"
-          placeholder="Min Price"
+          placeholder="Prix Min"
           value={minPrice}
           onChange={(e) => setMinPrice(e.target.value)}
         />
         <input
           type="number"
-          placeholder="Max Price"
+          placeholder="Prix Max"
           value={maxPrice}
           onChange={(e) => setMaxPrice(e.target.value)}
         />
@@ -59,17 +59,17 @@ function SportsEquipments() {
           <div key={product.id} className="product-card">
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
-            <p>${product.price.toFixed(2)}</p>
+            <p>{product.price.toFixed(2)} €</p>
             <div className="product-card-buttons">
-              <button onClick={() => addToCart(product)}>Add to Cart</button>
-              <button onClick={() => navigate(`/product/sports-equipments/${product.id}`)}>View Details</button>
+              <button onClick={() => addToCart(product)}>Ajouter au Panier</button>
+              <button onClick={() => navigate(`/product/sports-equipments/${product.id}`)}>Voir Détails</button>
               <label>
                 <input
                   type="checkbox"
                   checked={compareList.includes(product)}
                   onChange={() => handleCompareChange(product)}
                 />
-                Compare
+                Comparer
               </label>
             </div>
           </div>
@@ -79,4 +79,4 @@ function SportsEquipments() {
   );
 }
 
-export default SportsEquipments;
+export default SportsEquipments_fr;

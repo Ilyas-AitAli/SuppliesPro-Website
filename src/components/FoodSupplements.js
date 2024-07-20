@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
+import { CompareContext } from '../context/CompareContext';
 import productsData from './productsData';
 import './FoodSupplements.css';
 
@@ -9,7 +10,16 @@ function FoodSupplements() {
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
   const { addToCart } = useContext(CartContext);
+  const { compareList, addToCompare, removeFromCompare } = useContext(CompareContext);
   const navigate = useNavigate();
+
+  const handleCompareChange = (product) => {
+    if (compareList.includes(product)) {
+      removeFromCompare(product);
+    } else {
+      addToCompare(product);
+    }
+  };
 
   const filteredProducts = productsData.filter((product) => {
     return (
@@ -53,6 +63,14 @@ function FoodSupplements() {
             <div className="product-card-buttons">
               <button onClick={() => addToCart(product)}>Add to Cart</button>
               <button onClick={() => navigate(`/product/food-supplements/${product.id}`)}>View Details</button>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={compareList.includes(product)}
+                  onChange={() => handleCompareChange(product)}
+                />
+                Compare
+              </label>
             </div>
           </div>
         ))}
