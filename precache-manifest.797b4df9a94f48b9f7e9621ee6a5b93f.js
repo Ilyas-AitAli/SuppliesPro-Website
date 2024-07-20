@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b219111ec06c8092034f599b3162ec9",
+    "revision": "ca06d8f75246bf0d3855512278745ba8",
     "url": "/SuppliesPro-Website/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SuppliesPro-Website/static/css/main.e99416d0.chunk.css"
   },
   {
-    "revision": "138e6507e4c3fe532f96",
-    "url": "/SuppliesPro-Website/static/js/2.91f2b442.chunk.js"
+    "revision": "35b075b99d96b6e79e7e",
+    "url": "/SuppliesPro-Website/static/js/2.2c8ea4c6.chunk.js"
   },
   {
     "revision": "fc00bc768ebd527aa418",
