@@ -33,10 +33,6 @@ function Header_fr() {
         </ul>
       </nav>
       <div className="user-section">
-        <select onChange={handleLanguageChange} defaultValue="fr">
-          <option value="en">EN</option>
-          <option value="fr">FR</option>
-        </select>
         <Link to="/fr/cart" className="cart-icon">
           <i className="fas fa-shopping-cart"></i>
           {cart.length > 0 && <span className="cart-count">{cart.length}</span>}

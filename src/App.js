@@ -35,37 +35,47 @@ import './App.css';
 function App() {
   const [isFrench, setIsFrench] = useState(false);
 
+  const handleLanguageToggle = () => {
+    setIsFrench(!isFrench);
+  };
+
   return (
     <CartProvider>
       <CompareProvider>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <div>
+            {isFrench ? <Header_fr /> : <Header />}
+            <button onClick={handleLanguageToggle}>
+              {isFrench ? 'Switch to English' : 'Passer en Français'}
+            </button>
             <Routes>
-              <Route path="/" element={<Layout component={isFrench ? <HomePage_fr /> : <HomePage />} isFrench={isFrench} />} />
-              <Route path="/food-supplements" element={<Layout component={isFrench ? <FoodSupplements_fr /> : <FoodSupplements />} isFrench={isFrench} />} />
-              <Route path="/sports-equipments" element={<Layout component={isFrench ? <SportsEquipments_fr /> : <SportsEquipments />} isFrench={isFrench} />} />
-              <Route path="/about-us" element={<Layout component={isFrench ? <AboutUs_fr /> : <AboutUs />} isFrench={isFrench} />} />
-              <Route path="/contact-us" element={<Layout component={isFrench ? <ContactPage_fr /> : <ContactPage />} isFrench={isFrench} />} />
-              <Route path="/register" element={<Layout component={isFrench ? <Register_fr /> : <Register />} isFrench={isFrench} />} />
-              <Route path="/login" element={<Layout component={isFrench ? <Login_fr /> : <Login />} isFrench={isFrench} />} />
-              <Route path="/cart" element={<Layout component={isFrench ? <Cart_fr /> : <Cart />} isFrench={isFrench} />} />
-              <Route path="/client-progress" element={<Layout component={isFrench ? <ClientProgress_fr /> : <ClientProgress />} isFrench={isFrench} />} />
-              <Route path="/compare" element={<Layout component={isFrench ? <Compare_fr /> : <Compare />} isFrench={isFrench} />} />
-              <Route path="/product/:category/:productId" element={<Layout component={isFrench ? <ProductDetail_fr /> : <ProductDetail />} isFrench={isFrench} />} />
+              <Route path="/" element={<Layout component={isFrench ? <HomePage_fr /> : <HomePage />} />} />
+              <Route path="/food-supplements" element={<Layout component={isFrench ? <FoodSupplements_fr /> : <FoodSupplements />} />} />
+              <Route path="/sports-equipments" element={<Layout component={isFrench ? <SportsEquipments_fr /> : <SportsEquipments />} />} />
+              <Route path="/about-us" element={<Layout component={isFrench ? <AboutUs_fr /> : <AboutUs />} />} />
+              <Route path="/contact-us" element={<Layout component={isFrench ? <ContactPage_fr /> : <ContactPage />} />} />
+              <Route path="/register" element={<Layout component={isFrench ? <Register_fr /> : <Register />} />} />
+              <Route path="/login" element={<Layout component={isFrench ? <Login_fr /> : <Login />} />} />
+              <Route path="/cart" element={<Layout component={isFrench ? <Cart_fr /> : <Cart />} />} />
+              <Route path="/client-progress" element={<Layout component={isFrench ? <ClientProgress_fr /> : <ClientProgress />} />} />
+              <Route path="/compare" element={<Layout component={isFrench ? <Compare_fr /> : <Compare />} />} />
+              <Route path="/product/:category/:productId" element={<Layout component={isFrench ? <ProductDetail_fr /> : <ProductDetail />} />} />
 
               {/* French Routes */}
-              <Route path="/fr" element={<Layout component={<HomePage_fr />} isFrench />} />
-              <Route path="/fr/food-supplements" element={<Layout component={<FoodSupplements_fr />} isFrench />} />
-              <Route path="/fr/sports-equipments" element={<Layout component={<SportsEquipments_fr />} isFrench />} />
-              <Route path="/fr/about-us" element={<Layout component={<AboutUs_fr />} isFrench />} />
-              <Route path="/fr/contact-us" element={<Layout component={<ContactPage_fr />} isFrench />} />
-              <Route path="/fr/register" element={<Layout component={<Register_fr />} isFrench />} />
-              <Route path="/fr/login" element={<Layout component={<Login_fr />} isFrench />} />
-              <Route path="/fr/cart" element={<Layout component={<Cart_fr />} isFrench />} />
-              <Route path="/fr/client-progress" element={<Layout component={<ClientProgress_fr />} isFrench />} />
-              <Route path="/fr/compare" element={<Layout component={<Compare_fr />} isFrench />} />
-              <Route path="/fr/product/:category/:productId" element={<Layout component={<ProductDetail_fr />} isFrench />} />
+              <Route path="/fr" element={<Layout component={<HomePage_fr />} />} />
+              <Route path="/fr/food-supplements" element={<Layout component={<FoodSupplements_fr />} />} />
+              <Route path="/fr/sports-equipments" element={<Layout component={<SportsEquipments_fr />} />} />
+              <Route path="/fr/about-us" element={<Layout component={<AboutUs_fr />} />} />
+              <Route path="/fr/contact-us" element={<Layout component={<ContactPage_fr />} />} />
+              <Route path="/fr/register" element={<Layout component={<Register_fr />} />} />
+              <Route path="/fr/login" element={<Layout component={<Login_fr />} />} />
+              <Route path="/fr/cart" element={<Layout component={<Cart_fr />} />} />
+              <Route path="/fr/client-progress" element={<Layout component={<ClientProgress_fr />} />} />
+              <Route path="/fr/compare" element={<Layout component={<Compare_fr />} />} />
+              <Route path="/fr/product/:category/:productId" element={<Layout component={<ProductDetail_fr />} />} />
             </Routes>
+            {isFrench ? <Footer_fr /> : <Footer />}
+            {isFrench ? <Chat_fr /> : <Chat />}
           </div>
         </Router>
       </CompareProvider>
@@ -73,12 +83,9 @@ function App() {
   );
 }
 
-const Layout = ({ component, isFrench }) => (
+const Layout = ({ component }) => (
   <div>
-    {isFrench ? <Header_fr /> : <Header />}
     {component}
-    {isFrench ? <Footer_fr /> : <Footer />}
-    {isFrench ? <Chat_fr /> : <Chat />}
   </div>
 );
 
