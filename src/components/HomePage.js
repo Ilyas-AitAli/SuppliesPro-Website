@@ -37,11 +37,11 @@ function HomePage() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1>Embark on Your Next Adventure!</h1>
-          <p>Join Us Today!</p>
-          <p>At SuppliesPro, we offer a wide range of high-quality products to support your fitness journey. From dietary supplements to sports equipment, we have everything you need to achieve your goals.</p>
-          <p>Our products are designed to help you improve your performance, enhance your health, and stay motivated. Discover the difference with SuppliesPro and take your training to the next level.</p>
-          <a href="#categories" className="hero-button">
+          <h1 tabIndex="0">Embark on Your Next Adventure!</h1>
+          <p tabIndex="0">Join Us Today!</p>
+          <p tabIndex="0">At SuppliesPro, we offer a wide range of high-quality products to support your fitness journey. From dietary supplements to sports equipment, we have everything you need to achieve your goals.</p>
+          <p tabIndex="0">Our products are designed to help you improve your performance, enhance your health, and stay motivated. Discover the difference with SuppliesPro and take your training to the next level.</p>
+          <a href="#categories" className="hero-button" aria-label="Discover our products">
             <button>Discover our products</button>
           </a>
         </div>
@@ -52,15 +52,15 @@ function HomePage() {
 
       {/* Testimonials */}
       <section className="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div className="testimonial-slider">
-          <button onClick={prevTestimonial}>
+        <h2 tabIndex="0">What Our Clients Say</h2>
+        <div className="testimonial-slider" aria-live="polite">
+          <button onClick={prevTestimonial} aria-label="Previous Testimonial">
             <FontAwesomeIcon icon={faChevronLeft} />
           </button>
-          <div className="testimonial">
+          <div className="testimonial" tabIndex="0">
             <p>{testimonials[currentTestimonial]}</p>
           </div>
-          <button onClick={nextTestimonial}>
+          <button onClick={nextTestimonial} aria-label="Next Testimonial">
             <FontAwesomeIcon icon={faChevronRight} />
           </button>
         </div>
@@ -70,6 +70,9 @@ function HomePage() {
               key={index}
               className={index === currentTestimonial ? 'active' : ''}
               onClick={() => setCurrentTestimonial(index)}
+              aria-label={`Testimonial ${index + 1}`}
+              role="button"
+              tabIndex="0"
             ></span>
           ))}
         </div>
@@ -77,92 +80,92 @@ function HomePage() {
 
       {/* Product Categories */}
       <section id="categories" className="product-categories">
-        <h2>Our Product Categories</h2>
+        <h2 tabIndex="0">Our Product Categories</h2>
         <div className="categories">
           <div className="category-wrapper">
-            <div className={`category ${isFlipped.supplements ? 'flipped' : ''}`} onClick={() => handleFlip('supplements')}>
+            <div className={`category ${isFlipped.supplements ? 'flipped' : ''}`} onClick={() => handleFlip('supplements')} role="button" tabIndex="0" aria-pressed={isFlipped.supplements} aria-label="Flip to see supplements description">
               <div className="front">
                 <FontAwesomeIcon icon={faAppleAlt} size="3x" />
               </div>
               <div className="back">
-                <p>Find the best supplements to boost your performance and health.</p>
+                <p tabIndex="0">Find the best supplements to boost your performance and health.</p>
               </div>
             </div>
-            <Link to="/food-supplements" className="category-button">Supplements</Link>
+            <Link to="/food-supplements" className="category-button" aria-label="View Supplements">Supplements</Link>
           </div>
           <div className="category-wrapper">
-            <div className={`category ${isFlipped.equipments ? 'flipped' : ''}`} onClick={() => handleFlip('equipments')}>
+            <div className={`category ${isFlipped.equipments ? 'flipped' : ''}`} onClick={() => handleFlip('equipments')} role="button" tabIndex="0" aria-pressed={isFlipped.equipments} aria-label="Flip to see equipments description">
               <div className="front">
                 <FontAwesomeIcon icon={faDumbbell} size="3x" />
               </div>
               <div className="back">
-                <p>Discover our range of high-quality sports equipments.</p>
+                <p tabIndex="0">Discover our range of high-quality sports equipments.</p>
               </div>
             </div>
-            <Link to="/sports-equipments" className="category-button">Equipments</Link>
+            <Link to="/sports-equipments" className="category-button" aria-label="View Equipments">Equipments</Link>
           </div>
         </div>
       </section>
 
       {/* Best Selling Products */}
       <section className="best-selling-products">
-        <h2>Best Selling Products</h2>
+        <h2 tabIndex="0">Best Selling Products</h2>
         <div className="products">
           <div className="product-wrapper">
-            <div className={`product ${isProductFlipped.proteinWhey ? 'flipped' : ''}`} onClick={() => handleProductFlip('proteinWhey')}>
+            <div className={`product ${isProductFlipped.proteinWhey ? 'flipped' : ''}`} onClick={() => handleProductFlip('proteinWhey')} role="button" tabIndex="0" aria-pressed={isProductFlipped.proteinWhey} aria-label="Flip to see protein whey description">
               <div className="front">
                 <img src={`${process.env.PUBLIC_URL}/images/protein-whey.jpg`} alt="Protein Whey" />
               </div>
               <div className="back">
-                <p>High-quality protein whey for muscle growth and recovery.</p>
+                <p tabIndex="0">High-quality protein whey for muscle growth and recovery.</p>
               </div>
             </div>
-            <Link to="/food-supplements" className="product-button">Protein Whey</Link>
+            <Link to="/food-supplements" className="product-button" aria-label="View Protein Whey">Protein Whey</Link>
           </div>
           <div className="product-wrapper">
-            <div className={`product ${isProductFlipped.creatine ? 'flipped' : ''}`} onClick={() => handleProductFlip('creatine')}>
+            <div className={`product ${isProductFlipped.creatine ? 'flipped' : ''}`} onClick={() => handleProductFlip('creatine')} role="button" tabIndex="0" aria-pressed={isProductFlipped.creatine} aria-label="Flip to see creatine description">
               <div className="front">
                 <img src={`${process.env.PUBLIC_URL}/images/creatine.jpg`} alt="Creatine" />
               </div>
               <div className="back">
-                <p>Creatine to enhance your workout performance.</p>
+                <p tabIndex="0">Creatine to enhance your workout performance.</p>
               </div>
             </div>
-            <Link to="/food-supplements" className="product-button">Creatine</Link>
+            <Link to="/food-supplements" className="product-button" aria-label="View Creatine">Creatine</Link>
           </div>
           <div className="product-wrapper">
-            <div className={`product ${isProductFlipped.dumbbells ? 'flipped' : ''}`} onClick={() => handleProductFlip('dumbbells')}>
+            <div className={`product ${isProductFlipped.dumbbells ? 'flipped' : ''}`} onClick={() => handleProductFlip('dumbbells')} role="button" tabIndex="0" aria-pressed={isProductFlipped.dumbbells} aria-label="Flip to see dumbbells description">
               <div className="front">
                 <img src={`${process.env.PUBLIC_URL}/images/dumbbells.jpg`} alt="Dumbbells" />
               </div>
               <div className="back">
-                <p>Durable dumbbells for strength training.</p>
+                <p tabIndex="0">Durable dumbbells for strength training.</p>
               </div>
             </div>
-            <Link to="/sports-equipments" className="product-button">Dumbbells</Link>
+            <Link to="/sports-equipments" className="product-button" aria-label="View Dumbbells">Dumbbells</Link>
           </div>
           <div className="product-wrapper">
-            <div className={`product ${isProductFlipped.jumpRope ? 'flipped' : ''}`} onClick={() => handleProductFlip('jumpRope')}>
+            <div className={`product ${isProductFlipped.jumpRope ? 'flipped' : ''}`} onClick={() => handleProductFlip('jumpRope')} role="button" tabIndex="0" aria-pressed={isProductFlipped.jumpRope} aria-label="Flip to see jump rope description">
               <div className="front">
                 <img src={`${process.env.PUBLIC_URL}/images/jump-rope.jpg`} alt="Jump Rope" />
               </div>
               <div className="back">
-                <p>High-quality jump rope for cardio workouts.</p>
+                <p tabIndex="0">High-quality jump rope for cardio workouts.</p>
               </div>
             </div>
-            <Link to="/sports-equipments" className="product-button">Jump Rope</Link>
+            <Link to="/sports-equipments" className="product-button" aria-label="View Jump Rope">Jump Rope</Link>
           </div>
         </div>
       </section>
 
       {/* Detailed Articles */}
       <section className="detailed-articles">
-        <h2>Detailed Article</h2>
+        <h2 tabIndex="0">Detailed Article</h2>
         <div className="articles">
           <div className="article">
             <div className="article-content">
-              <h3>Dietary Supplements</h3>
-              <p>
+              <h3 tabIndex="0">Dietary Supplements</h3>
+              <p tabIndex="0">
                 - Boost Your Performance<br />
                 Dietary supplements can play a crucial role in enhancing athletic performance. Supplements such as protein powders, creatine, and BCAAs help in muscle recovery, growth, and energy production. For athletes engaged in high-intensity training, these supplements can be the difference between a good workout and an exceptional one.<br /><br />
                 - Support Overall Health<br />
@@ -180,8 +183,8 @@ function HomePage() {
               <img src={`${process.env.PUBLIC_URL}/images/home-sports-equipment.jpg`} alt="Home Sports Equipment" />
             </div>
             <div className="article-content">
-              <h3>Home Sports Equipment</h3>
-              <p>
+              <h3 tabIndex="0">Home Sports Equipment</h3>
+              <p tabIndex="0">
                 - Convenience and Flexibility<br />
                 Investing in home sports equipment provides unparalleled convenience. You can work out at any time without worrying about gym hours or commuting. This flexibility allows for a more consistent workout routine, which is key to achieving fitness goals.<br /><br />
                 - Cost-Effective<br />
