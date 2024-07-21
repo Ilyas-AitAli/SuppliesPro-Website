@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/SuppliesPro-Website/static/css/main.a1c9649a.chunk.css",
-    "main.js": "/SuppliesPro-Website/static/js/main.60692ee5.chunk.js",
-    "main.js.map": "/SuppliesPro-Website/static/js/main.60692ee5.chunk.js.map",
-    "runtime~main.js": "/SuppliesPro-Website/static/js/runtime~main.5d0e5c06.js",
-    "runtime~main.js.map": "/SuppliesPro-Website/static/js/runtime~main.5d0e5c06.js.map",
-    "static/js/2.4b97ad41.chunk.js": "/SuppliesPro-Website/static/js/2.4b97ad41.chunk.js",
-    "static/js/2.4b97ad41.chunk.js.map": "/SuppliesPro-Website/static/js/2.4b97ad41.chunk.js.map",
-    "static/js/3.bd282c0b.chunk.js": "/SuppliesPro-Website/static/js/3.bd282c0b.chunk.js",
-    "static/js/3.bd282c0b.chunk.js.map": "/SuppliesPro-Website/static/js/3.bd282c0b.chunk.js.map",
+    "main.css": "/SuppliesPro-Website/static/css/main.7b51dd4c.chunk.css",
+    "main.js": "/SuppliesPro-Website/static/js/main.381cfa46.chunk.js",
+    "main.js.map": "/SuppliesPro-Website/static/js/main.381cfa46.chunk.js.map",
+    "runtime~main.js": "/SuppliesPro-Website/static/js/runtime~main.26653782.js",
+    "runtime~main.js.map": "/SuppliesPro-Website/static/js/runtime~main.26653782.js.map",
+    "static/js/2.2c8ea4c6.chunk.js": "/SuppliesPro-Website/static/js/2.2c8ea4c6.chunk.js",
+    "static/js/2.2c8ea4c6.chunk.js.map": "/SuppliesPro-Website/static/js/2.2c8ea4c6.chunk.js.map",
+    "static/js/3.20abe59b.chunk.js": "/SuppliesPro-Website/static/js/3.20abe59b.chunk.js",
+    "static/js/3.20abe59b.chunk.js.map": "/SuppliesPro-Website/static/js/3.20abe59b.chunk.js.map",
     "index.html": "/SuppliesPro-Website/index.html",
-    "precache-manifest.7c51e8c03611e86f188dacfe1c82e7cc.js": "/SuppliesPro-Website/precache-manifest.7c51e8c03611e86f188dacfe1c82e7cc.js",
+    "precache-manifest.13930dad0cecef305ede247782cde21e.js": "/SuppliesPro-Website/precache-manifest.13930dad0cecef305ede247782cde21e.js",
     "service-worker.js": "/SuppliesPro-Website/service-worker.js",
-    "static/css/main.a1c9649a.chunk.css.map": "/SuppliesPro-Website/static/css/main.a1c9649a.chunk.css.map"
+    "static/css/main.7b51dd4c.chunk.css.map": "/SuppliesPro-Website/static/css/main.7b51dd4c.chunk.css.map"
   }
 }
